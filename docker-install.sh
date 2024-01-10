@@ -1,3 +1,7 @@
 #!/bin/sh
-cp .env.example .env
+if [ ! -e .env ]
+then
+  cp .env.example .env
+fi
+
 chmod +x ./docker-up.sh ./docker-down.sh
