@@ -1,2 +1,2 @@
 #!/bin/sh
-docker compose down -v
+sudo docker compose down -v
