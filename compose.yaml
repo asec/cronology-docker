@@ -3,7 +3,7 @@ services:
     db:
         image: mongo:latest
     api:
-        image: asector/cronologyv1:api-1.0.0
+        image: asector/cronology:api-1.0.0
         ports:
             -   ${CRNLG_API_PORT}:7331
         environment:
@@ -12,7 +12,7 @@ services:
             -   /etc/letsencrypt/live/${CRNLG_DOMAIN}/privkey.pem:/etc/letsencrypt/live/${CRNLG_DOMAIN}/privkey.pem
             -   /etc/letsencrypt/live/${CRNLG_DOMAIN}/fullchain.pem:/etc/letsencrypt/live/${CRNLG_DOMAIN}/fullchain.pem
     gui:
-        image: asector/cronologyv1:gui-1.0.0
+        image: asector/cronology:gui-1.0.0
         ports:
             -   8080:8080
         environment:
