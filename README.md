@@ -4,20 +4,14 @@ This process was mainly designed to work on AWS hosted Ubuntu 22.04.2 machines.
 
 ## Usage:
 
-#### 1. Generate Let's Encrypt certificates with `certbot`
-
-#### 2. Install `docker` and the `docker-compose` plugin
-
-#### 3. Create the containers:
+#### 1. Clone the repository
 
 `git clone https://github.com/asec/cronology-docker.git`
 
 `cd ./cronology-docker`
 
-`chmod +x ./docker-install.sh`
+#### 2. Run the install script
 
-`./docker-install.sh`
+`chmod +x ./install.sh`
 
-Modify the configuration in the newly created `.env` file, if necessary.
-
-`./docker-up`
+This will prompt you for any necessary data, such as the domain for your app. It should install `docker` and `certbot`, also will try to generate the certificates for your domain.
