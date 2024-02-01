@@ -9,8 +9,8 @@ services:
         environment:
             CRNLG_DOMAIN: ${CRNLG_DOMAIN}
         volumes:
-            -   /etc/letsencrypt/live/${CRNLG_DOMAIN}/privkey.pem:/etc/letsencrypt/live/${CRNLG_DOMAIN}/privkey.pem
-            -   /etc/letsencrypt/live/${CRNLG_DOMAIN}/fullchain.pem:/etc/letsencrypt/live/${CRNLG_DOMAIN}/fullchain.pem
+            -   /etc/letsencrypt/live/${CRNLG_DOMAIN}/privkey.pem:/etc/letsencrypt/live/privkey.pem
+            -   /etc/letsencrypt/live/${CRNLG_DOMAIN}/fullchain.pem:/etc/letsencrypt/live/fullchain.pem
     gui:
         image: asector/cronology:gui-1.0.0
         ports:
